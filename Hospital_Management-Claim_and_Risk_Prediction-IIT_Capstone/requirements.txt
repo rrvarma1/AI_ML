@@ -1,0 +1,12 @@
+pandas
+numpy
+sqlalchemy
+oracledb
+scikit-learn
+xgboost
+matplotlib
+joblib
+pyarrow
+jupyter
+nbformat
+python-docx
