@@ -1,0 +1,583 @@
+{
+  "schema_version": 1,
+  "model_id": "claim-v3",
+  "artifact_sha256": "90713e0b23eda93bcad9cc996f1b9da9f18ce33bd1bee540e493290e23bbcf60",
+  "category_contract_sha256": "93dafea4aafd63c0b6f431b6e83bd60f1a1373a9fadc41eb7b238c0e153d3d68",
+  "created_at": "2026-07-05T08:04:13.376056Z",
+  "baseline_population": "earliest_80_percent_chronological_training_split",
+  "training_period": {
+    "start": "2025-01-23T00:00:00",
+    "end": "2025-12-13T00:00:00"
+  },
+  "record_count": 20000,
+  "source_file_sha256": {
+    "PATIENTS": "5a29b7232cf6bdbd65b461a541ce40110724ae6e322479b357b2b64bf5a423be",
+    "VISITS": "1be9e9f00554d71d36a06aabfd244cefc07de19a9884ecd4dfe029375405b398",
+    "BILLING": "1b3405d3d42d08fc62c2149e3a9a04bd5c1ff4534e93be75cafb140bc5ab7fca"
+  },
+  "feature_profiles": {
+    "age": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 44.6902,
+      "std": 17.80330092876035,
+      "minimum": 1.0,
+      "maximum": 90.0,
+      "median": 45.0,
+      "cut_points": [
+        22.0,
+        29.0,
+        35.0,
+        40.0,
+        45.0,
+        50.0,
+        54.0,
+        60.0,
+        68.0
+      ],
+      "bin_proportions": [
+        0.0989,
+        0.0863,
+        0.1017,
+        0.09785,
+        0.1064,
+        0.1072,
+        0.0868,
+        0.1097,
+        0.1037,
+        0.10145
+      ]
+    },
+    "chronic_flag": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 0.5052,
+      "std": 0.4999729592688398,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "median": 1.0,
+      "cut_points": [
+        0.0,
+        1.0
+      ],
+      "bin_proportions": [
+        0.0,
+        0.4948,
+        0.5052
+      ]
+    },
+    "length_of_stay_hours": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 19.5803375,
+      "std": 12.304685429587154,
+      "minimum": 0.5,
+      "maximum": 73.83,
+      "median": 18.27,
+      "cut_points": [
+        4.27,
+        8.13,
+        11.79,
+        15.05,
+        18.27,
+        21.57,
+        25.192999999999994,
+        29.8,
+        36.28100000000002
+      ],
+      "bin_proportions": [
+        0.0998,
+        0.1001,
+        0.09975,
+        0.10025,
+        0.09995,
+        0.0998,
+        0.10035,
+        0.09995,
+        0.10005,
+        0.1
+      ]
+    },
+    "billed_amount": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 20772.790214499997,
+      "std": 12570.900450655465,
+      "minimum": 500.0,
+      "maximum": 84133.09,
+      "median": 19560.550000000003,
+      "cut_points": [
+        5039.6539999999995,
+        9497.954000000002,
+        13383.837000000001,
+        16562.604000000003,
+        19560.550000000003,
+        22635.380000000005,
+        26177.077999999998,
+        30632.200000000004,
+        37410.75400000002
+      ],
+      "bin_proportions": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    "days_from_visit_to_billing": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 55.23655,
+      "std": 77.46467900984499,
+      "minimum": 0.0,
+      "maximum": 322.0,
+      "median": 1.0,
+      "cut_points": [
+        0.0,
+        1.0,
+        36.0,
+        75.0,
+        124.0,
+        182.0
+      ],
+      "bin_proportions": [
+        0.0,
+        0.4997,
+        0.09895,
+        0.09925,
+        0.102,
+        0.09935,
+        0.10075
+      ]
+    },
+    "days_since_registration_at_visit": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 115.0116,
+      "std": 93.65383529487794,
+      "minimum": 0.0,
+      "maximum": 327.0,
+      "median": 105.0,
+      "cut_points": [
+        0.0,
+        7.0,
+        40.0,
+        73.0,
+        105.0,
+        140.0,
+        175.0,
+        210.0,
+        251.0
+      ],
+      "bin_proportions": [
+        0.0,
+        0.1988,
+        0.10045,
+        0.0994,
+        0.09825,
+        0.10225,
+        0.10055,
+        0.0986,
+        0.10145,
+        0.10025
+      ]
+    },
+    "billing_month": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 8.3658,
+      "std": 2.542831170172404,
+      "minimum": 1.0,
+      "maximum": 12.0,
+      "median": 9.0,
+      "cut_points": [
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0
+      ],
+      "bin_proportions": [
+        0.09255,
+        0.06705,
+        0.07975,
+        0.10195,
+        0.12095,
+        0.13655,
+        0.1562,
+        0.245
+      ]
+    },
+    "billing_quarter": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 3.11675,
+      "std": 0.8730517954279989,
+      "minimum": 1.0,
+      "maximum": 4.0,
+      "median": 3.0,
+      "cut_points": [
+        2.0,
+        3.0,
+        4.0
+      ],
+      "bin_proportions": [
+        0.0451,
+        0.19425,
+        0.35945,
+        0.4012
+      ]
+    },
+    "billing_day_of_week": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 2.98595,
+      "std": 1.9874236079658785,
+      "minimum": 0.0,
+      "maximum": 6.0,
+      "median": 3.0,
+      "cut_points": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "bin_proportions": [
+        0.0,
+        0.1424,
+        0.1438,
+        0.1441,
+        0.14025,
+        0.1508,
+        0.1419,
+        0.13675
+      ]
+    },
+    "billing_is_weekend": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 0.27865,
+      "std": 0.4483348943591452,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "median": 0.0,
+      "cut_points": [
+        0.0,
+        1.0
+      ],
+      "bin_proportions": [
+        0.0,
+        0.72135,
+        0.27865
+      ]
+    },
+    "visit_month": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 6.54785,
+      "std": 3.1391098065375105,
+      "minimum": 1.0,
+      "maximum": 12.0,
+      "median": 7.0,
+      "cut_points": [
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0
+      ],
+      "bin_proportions": [
+        0.03755,
+        0.0856,
+        0.09295,
+        0.0924,
+        0.18465,
+        0.0922,
+        0.09465,
+        0.0944,
+        0.0947,
+        0.1309
+      ]
+    },
+    "visit_quarter": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 2.51635,
+      "std": 1.064487049005331,
+      "minimum": 1.0,
+      "maximum": 4.0,
+      "median": 3.0,
+      "cut_points": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "bin_proportions": [
+        0.0,
+        0.2161,
+        0.27705,
+        0.28125,
+        0.2256
+      ]
+    },
+    "visit_day_of_week": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 2.99585,
+      "std": 1.992870486885607,
+      "minimum": 0.0,
+      "maximum": 6.0,
+      "median": 3.0,
+      "cut_points": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "bin_proportions": [
+        0.0,
+        0.14375,
+        0.1404,
+        0.143,
+        0.1436,
+        0.1471,
+        0.14265,
+        0.1395
+      ]
+    },
+    "visit_is_weekend": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 0.28215,
+      "std": 0.45004597265170126,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "median": 0.0,
+      "cut_points": [
+        0.0,
+        1.0
+      ],
+      "bin_proportions": [
+        0.0,
+        0.71785,
+        0.28215
+      ]
+    },
+    "gender": {
+      "type": "categorical",
+      "missing_rate": 0.0,
+      "distribution": {
+        "F": 0.508,
+        "M": 0.492
+      },
+      "known_categories": [
+        "F",
+        "M"
+      ]
+    },
+    "city": {
+      "type": "categorical",
+      "missing_rate": 0.0,
+      "distribution": {
+        "Bangalore": 0.16805,
+        "Chennai": 0.1559,
+        "Delhi": 0.16345,
+        "Hyderabad": 0.1747,
+        "Mumbai": 0.16605,
+        "Pune": 0.17185
+      },
+      "known_categories": [
+        "Bangalore",
+        "Chennai",
+        "Delhi",
+        "Hyderabad",
+        "Mumbai",
+        "Pune"
+      ]
+    },
+    "insurance_provider": {
+      "type": "categorical",
+      "missing_rate": 0.0,
+      "distribution": {
+        "CareOne": 0.25275,
+        "HealthPlus": 0.24905,
+        "MediCareX": 0.26045,
+        "SecureLife": 0.23775
+      },
+      "known_categories": [
+        "CareOne",
+        "HealthPlus",
+        "MediCareX",
+        "SecureLife"
+      ]
+    },
+    "department": {
+      "type": "categorical",
+      "missing_rate": 0.0,
+      "distribution": {
+        "Cardiology": 0.16715,
+        "ER": 0.1662,
+        "General": 0.1686,
+        "ICU": 0.16335,
+        "Neurology": 0.16585,
+        "Orthopedics": 0.16885
+      },
+      "known_categories": [
+        "Cardiology",
+        "ER",
+        "General",
+        "ICU",
+        "Neurology",
+        "Orthopedics"
+      ]
+    },
+    "visit_type": {
+      "type": "categorical",
+      "missing_rate": 0.0,
+      "distribution": {
+        "ER": 0.3326,
+        "ICU": 0.3295,
+        "OPD": 0.3379
+      },
+      "known_categories": [
+        "ER",
+        "ICU",
+        "OPD"
+      ]
+    },
+    "risk_score": {
+      "type": "categorical",
+      "missing_rate": 0.0,
+      "distribution": {
+        "High": 0.19935,
+        "Low": 0.5006,
+        "Medium": 0.30005
+      },
+      "known_categories": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "doctor_id": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 150.1676,
+      "std": 29.144461055919194,
+      "minimum": 100.0,
+      "maximum": 200.0,
+      "median": 151.0,
+      "cut_points": [
+        110.0,
+        120.0,
+        130.0,
+        140.0,
+        151.0,
+        161.0,
+        170.0,
+        180.0,
+        190.0
+      ],
+      "bin_proportions": [
+        0.09815,
+        0.1001,
+        0.097,
+        0.0975,
+        0.107,
+        0.0996,
+        0.09115,
+        0.10045,
+        0.10135,
+        0.1077
+      ]
+    }
+  },
+  "prediction_profile": {
+    "class_distribution": {
+      "Paid": 0.37755,
+      "Pending": 0.18885,
+      "Rejected": 0.4336
+    },
+    "confidence": {
+      "type": "numeric",
+      "missing_rate": 0.0,
+      "mean": 0.46326929648765947,
+      "std": 0.08057702122366531,
+      "minimum": 0.3341348399826098,
+      "maximum": 0.8279636925052675,
+      "median": 0.46019383098948297,
+      "cut_points": [
+        0.36738553927382994,
+        0.3901282202622562,
+        0.41613446762780415,
+        0.4423271459743153,
+        0.46019383098948297,
+        0.474022041358308,
+        0.48806036801899827,
+        0.5086261777632507,
+        0.5611417210229783
+      ],
+      "bin_proportions": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    "mean_max_probability": 0.46326929648765947,
+    "low_confidence_rate": 0.76775
+  },
+  "target_distribution": {
+    "Paid": 0.5959,
+    "Pending": 0.2515,
+    "Rejected": 0.1526
+  },
+  "source": {
+    "type": "oracle",
+    "schema": "SOURCE_SCHEMA",
+    "extracted_at": "2026-07-05T08:04:11.176698Z",
+    "tables": {
+      "PATIENTS": {
+        "rows": 5000,
+        "sha256": "5a29b7232cf6bdbd65b461a541ce40110724ae6e322479b357b2b64bf5a423be"
+      },
+      "VISITS": {
+        "rows": 25000,
+        "sha256": "1be9e9f00554d71d36a06aabfd244cefc07de19a9884ecd4dfe029375405b398"
+      },
+      "BILLING": {
+        "rows": 25000,
+        "sha256": "1b3405d3d42d08fc62c2149e3a9a04bd5c1ff4534e93be75cafb140bc5ab7fca"
+      }
+    }
+  },
+  "validation_summary": {
+    "error_count": 0,
+    "warning_count": 0
+  }
+}
