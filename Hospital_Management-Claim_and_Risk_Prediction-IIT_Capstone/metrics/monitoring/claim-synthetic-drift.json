@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-05T10:10:39.857712Z",
+  "model_id": "claim-v3",
+  "artifact_sha256": "90713e0b23eda93bcad9cc996f1b9da9f18ce33bd1bee540e493290e23bbcf60",
+  "baseline_created_at": "2026-07-05T08:04:13.376056Z",
+  "window": {
+    "start": "2026-07-05T09:10:36.717794Z",
+    "end": "2026-07-05T10:10:36.717794Z"
+  },
+  "record_count": 100,
+  "overall_status": "critical",
+  "summary": {
+    "warning_features": 3,
+    "critical_features": 5,
+    "prediction_status": "critical"
+  },
+  "thresholds": {
+    "psi_warning": 0.1,
+    "psi_critical": 0.25,
+    "js_warning": 0.1,
+    "js_critical": 0.2,
+    "missing_delta_warning": 0.02,
+    "missing_delta_critical": 0.05,
+    "unseen_rate_warning": 0.01,
+    "unseen_rate_critical": 0.05,
+    "standardized_mean_warning": 0.25,
+    "standardized_mean_critical": 0.5,
+    "confidence_delta_warning": 0.05,
+    "confidence_delta_critical": 0.1
+  },
+  "feature_drift": {
+    "age": {
+      "type": "numeric",
+      "status": "warning",
+      "psi": 0.2238419478178387,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 44.6902,
+      "mean_current": 51.03,
+      "standardized_mean_shift": 0.35610250174215563
+    },
+    "chronic_flag": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.053926613913792124,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 0.5052,
+      "mean_current": 0.39,
+      "standardized_mean_shift": 0.23041246104282997
+    },
+    "length_of_stay_hours": {
+      "type": "numeric",
+      "status": "warning",
+      "psi": 0.15360180767060805,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 19.5803375,
+      "mean_current": 18.416900000000002,
+      "standardized_mean_shift": 0.09455239686196777
+    },
+    "billed_amount": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 0.4619188574623769,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 20772.790214499997,
+      "mean_current": 18686.6969,
+      "standardized_mean_shift": 0.16594621226128842
+    },
+    "days_from_visit_to_billing": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 9.755136959860245,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 55.23655,
+      "mean_current": 66.5,
+      "standardized_mean_shift": 0.1454011059487967
+    },
+    "days_since_registration_at_visit": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 3.9802485751944365,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 115.0116,
+      "mean_current": 377.88,
+      "standardized_mean_shift": 2.8068087032670266
+    },
+    "billing_month": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 0.48633244270510423,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 8.3658,
+      "mean_current": 6.56,
+      "standardized_mean_shift": 0.7101533209055194
+    },
+    "billing_quarter": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 0.38117698123649724,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 3.11675,
+      "mean_current": 2.55,
+      "standardized_mean_shift": 0.6491596523458962
+    },
+    "billing_day_of_week": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.056117852071790236,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 2.98595,
+      "mean_current": 3.15,
+      "standardized_mean_shift": 0.08254405318647928
+    },
+    "billing_is_weekend": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.00037588257344169296,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 0.27865,
+      "mean_current": 0.27,
+      "standardized_mean_shift": 0.019293613120086036
+    },
+    "visit_month": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.07214797000143894,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 6.54785,
+      "mean_current": 6.16,
+      "standardized_mean_shift": 0.12355413601405844
+    },
+    "visit_quarter": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.022578888051123857,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 2.51635,
+      "mean_current": 2.42,
+      "standardized_mean_shift": 0.09051307866077911
+    },
+    "visit_day_of_week": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.0469474774905562,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 2.99585,
+      "mean_current": 2.85,
+      "standardized_mean_shift": 0.07318588988084691
+    },
+    "visit_is_weekend": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.0007387295497239235,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 0.28215,
+      "mean_current": 0.27,
+      "standardized_mean_shift": 0.026997241922667087
+    },
+    "gender": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.00024236964827376115,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "city": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.004248743246768064,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "insurance_provider": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.007973405372162783,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "department": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.0037567074262095075,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "visit_type": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.0012379345810177309,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "risk_score": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.0039716003402648515,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "doctor_id": {
+      "type": "numeric",
+      "status": "warning",
+      "psi": 0.1127347657920141,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 150.1676,
+      "mean_current": 151.75,
+      "standardized_mean_shift": 0.05429505102063378
+    }
+  },
+  "prediction_drift": {
+    "status": "critical",
+    "class_distribution_baseline": {
+      "Paid": 0.37755,
+      "Pending": 0.18885,
+      "Rejected": 0.4336
+    },
+    "class_distribution_current": {
+      "Paid": 0.38,
+      "Pending": 0.16,
+      "Rejected": 0.46
+    },
+    "class_js_divergence": 0.0007941535460904668,
+    "class_psi": 0.006358924731823168,
+    "mean_max_probability_baseline": 0.46326929648765947,
+    "mean_max_probability_current": 0.41965845363359994,
+    "mean_max_probability_delta": -0.04361084285405953,
+    "low_confidence_rate_baseline": 0.76775,
+    "low_confidence_rate_current": 0.92,
+    "confidence_distribution": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 0.5926723256716727,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 0.46326929648765947,
+      "mean_current": 0.41965845363359994,
+      "standardized_mean_shift": 0.5412317580343999
+    }
+  }
+}

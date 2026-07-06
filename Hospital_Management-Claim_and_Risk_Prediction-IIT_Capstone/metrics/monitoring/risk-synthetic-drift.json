@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-05T10:11:15.398270Z",
+  "model_id": "risk-v5",
+  "artifact_sha256": "2f567439e0845046545085ed611416543001f4da578268fbcad145881bf24ed1",
+  "baseline_created_at": "2026-07-05T08:04:14.446357Z",
+  "window": {
+    "start": "2026-07-05T09:11:12.499004Z",
+    "end": "2026-07-05T10:11:12.499004Z"
+  },
+  "record_count": 100,
+  "overall_status": "critical",
+  "summary": {
+    "warning_features": 3,
+    "critical_features": 6,
+    "prediction_status": "critical"
+  },
+  "thresholds": {
+    "psi_warning": 0.1,
+    "psi_critical": 0.25,
+    "js_warning": 0.1,
+    "js_critical": 0.2,
+    "missing_delta_warning": 0.02,
+    "missing_delta_critical": 0.05,
+    "unseen_rate_warning": 0.01,
+    "unseen_rate_critical": 0.05,
+    "standardized_mean_warning": 0.25,
+    "standardized_mean_critical": 0.5,
+    "confidence_delta_warning": 0.05,
+    "confidence_delta_critical": 0.1
+  },
+  "feature_drift": {
+    "age": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 1.2817463391832917,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 44.68835,
+      "mean_current": 53.1,
+      "standardized_mean_shift": 0.471835448217438
+    },
+    "chronic_flag": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.059426431016768595,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 0.5007,
+      "mean_current": 0.38,
+      "standardized_mean_shift": 0.2414002365723492
+    },
+    "length_of_stay_hours": {
+      "type": "numeric",
+      "status": "warning",
+      "psi": 0.14493985806423282,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 19.587727500000003,
+      "mean_current": 19.2555,
+      "standardized_mean_shift": 0.02695314961595023
+    },
+    "billed_amount": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 0.2696500603306359,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 20792.173388,
+      "mean_current": 20216.3938,
+      "standardized_mean_shift": 0.045870842963917934
+    },
+    "approved_amount": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 0.461740189326093,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 15406.828653999999,
+      "mean_current": 7814.784199999998,
+      "standardized_mean_shift": 0.5476449943791369
+    },
+    "payment_days": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 2.975465827231183,
+      "missing_rate_baseline": 0.032299999999999995,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": -0.032299999999999995,
+      "mean_baseline": 13.048620440219077,
+      "mean_current": 47.001000000000005,
+      "standardized_mean_shift": 4.678451991912496
+    },
+    "days_since_registration_at_visit": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 4.110991421731848,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 98.61275,
+      "mean_current": 359.83,
+      "standardized_mean_shift": 3.138096540659946
+    },
+    "visit_year": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 2025.0,
+      "mean_current": 2025.53,
+      "standardized_mean_shift": 0.5299999999999727
+    },
+    "visit_month": {
+      "type": "numeric",
+      "status": "warning",
+      "psi": 0.22513155444802946,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 5.97315,
+      "mean_current": 6.3,
+      "standardized_mean_shift": 0.11661670574051616
+    },
+    "visit_quarter": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.07291394749407945,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 2.33895,
+      "mean_current": 2.47,
+      "standardized_mean_shift": 0.133118567485971
+    },
+    "visit_day_of_week": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.08240171814488387,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 2.9997,
+      "mean_current": 3.05,
+      "standardized_mean_shift": 0.025229281724615256
+    },
+    "visit_is_weekend": {
+      "type": "numeric",
+      "status": "ok",
+      "psi": 0.02052222842924807,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 0.28345,
+      "mean_current": 0.35,
+      "standardized_mean_shift": 0.14766806327641524
+    },
+    "gender": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.0012742566898653399,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "city": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.002814546093301222,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "insurance_provider": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.0032809286304078603,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "department": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.011039046466209252,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "visit_type": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.003402920422474316,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "claim_status": {
+      "type": "categorical",
+      "status": "ok",
+      "js_divergence": 0.037205686068744186,
+      "unseen_category_rate": 0.0,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0
+    },
+    "doctor_id": {
+      "type": "numeric",
+      "status": "warning",
+      "psi": 0.1292695780371853,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 150.17805,
+      "mean_current": 146.01,
+      "standardized_mean_shift": 0.1432135470251364
+    }
+  },
+  "prediction_drift": {
+    "status": "critical",
+    "class_distribution_baseline": {
+      "High": 0.1788,
+      "Low": 0.5371,
+      "Medium": 0.2841
+    },
+    "class_distribution_current": {
+      "High": 0.16,
+      "Low": 0.54,
+      "Medium": 0.3
+    },
+    "class_js_divergence": 0.00037110714097344545,
+    "class_psi": 0.0029700374909383907,
+    "mean_max_probability_baseline": 0.37683887039639996,
+    "mean_max_probability_current": 0.3725920165053986,
+    "mean_max_probability_delta": -0.004246853891001379,
+    "low_confidence_rate_baseline": 0.99755,
+    "low_confidence_rate_current": 1.0,
+    "confidence_distribution": {
+      "type": "numeric",
+      "status": "critical",
+      "psi": 0.5507482113140917,
+      "missing_rate_baseline": 0.0,
+      "missing_rate_current": 0.0,
+      "missing_rate_delta": 0.0,
+      "mean_baseline": 0.37683887039639996,
+      "mean_current": 0.3725920165053986,
+      "standardized_mean_shift": 0.18113307405633158
+    }
+  }
+}

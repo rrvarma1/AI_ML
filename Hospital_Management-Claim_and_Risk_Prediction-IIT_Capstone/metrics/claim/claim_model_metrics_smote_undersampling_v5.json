@@ -1,0 +1,116 @@
+{
+  "v1_random_forest": {
+    "model": "V1 Random Forest",
+    "accuracy": 0.4486,
+    "macro_f1": 0.36018997728675145,
+    "rejected_recall": 0.5409395973154363
+  },
+  "v2_xgboost": {
+    "model": "V2 XGBoost",
+    "accuracy": 0.4272,
+    "macro_f1": 0.3698800553326597,
+    "rejected_recall": 0.521505376344086
+  },
+  "v3_hypertuned_random_forest": {
+    "model": "V3 Hypertuned Random Forest",
+    "accuracy": 0.4296,
+    "macro_f1": 0.3670269303342777,
+    "rejected_recall": 0.610738255033557
+  },
+  "v4_interaction_features_random_forest": {
+    "model": "V4 Interaction Features Random Forest",
+    "accuracy": 0.4248,
+    "macro_f1": 0.3568770859409969,
+    "rejected_recall": 0.5906040268456376
+  },
+  "v5_smote_undersampling_random_forest": {
+    "accuracy": 0.4692,
+    "balanced_accuracy": 0.3977489597754263,
+    "macro_f1": 0.3492939532087928,
+    "rejected_recall": 0.4966442953020134,
+    "confusion_matrix": [
+      [
+        1887,
+        227,
+        908
+      ],
+      [
+        736,
+        89,
+        408
+      ],
+      [
+        325,
+        50,
+        370
+      ]
+    ],
+    "labels": [
+      "Paid",
+      "Pending",
+      "Rejected"
+    ],
+    "classification_report": {
+      "Paid": {
+        "precision": 0.6400949796472184,
+        "recall": 0.6244209133024488,
+        "f1-score": 0.6321608040201006,
+        "support": 3022.0
+      },
+      "Pending": {
+        "precision": 0.24316939890710382,
+        "recall": 0.07218167072181671,
+        "f1-score": 0.11131957473420888,
+        "support": 1233.0
+      },
+      "Rejected": {
+        "precision": 0.21945432977461446,
+        "recall": 0.4966442953020134,
+        "f1-score": 0.3044014808720691,
+        "support": 745.0
+      },
+      "accuracy": 0.4692,
+      "macro avg": {
+        "precision": 0.3675729027763122,
+        "recall": 0.3977489597754263,
+        "f1-score": 0.3492939532087928,
+        "support": 5000.0
+      },
+      "weighted avg": {
+        "precision": 0.47953767460568814,
+        "recall": 0.4692,
+        "f1-score": 0.45488521772914303,
+        "support": 5000.0
+      }
+    }
+  },
+  "selected_resampling_strategy": "Hybrid SMOTE + undersampling",
+  "cross_validation_results": [
+    {
+      "strategy": "Hybrid SMOTE + undersampling",
+      "cv_accuracy": 0.4886875,
+      "cv_macro_f1": 0.3662288823,
+      "cv_balanced_accuracy": 0.4077320039,
+      "cv_rejected_recall": 0.4676044648,
+      "mean_fit_seconds": 38.9657441974
+    },
+    {
+      "strategy": "Random undersampling",
+      "cv_accuracy": 0.3729375,
+      "cv_macro_f1": 0.3520136685,
+      "cv_balanced_accuracy": 0.4255063633,
+      "cv_rejected_recall": 0.6589175461,
+      "mean_fit_seconds": 8.9988310337
+    },
+    {
+      "strategy": "SMOTE",
+      "cv_accuracy": 0.5330625,
+      "cv_macro_f1": 0.3442996673,
+      "cv_balanced_accuracy": 0.3921140746,
+      "cv_rejected_recall": 0.3566513545,
+      "mean_fit_seconds": 55.6937491298
+    }
+  ],
+  "test_resampled": false,
+  "classifier_class_weight": null
+}

@@ -1,0 +1,122 @@
+{
+  "claim_logistic_regression": {
+    "accuracy": 0.3086,
+    "balanced_accuracy": 0.33362474250550433,
+    "macro_f1": 0.28892481715333057,
+    "confusion_matrix": [
+      [
+        908,
+        710,
+        1404
+      ],
+      [
+        352,
+        286,
+        595
+      ],
+      [
+        207,
+        189,
+        349
+      ]
+    ],
+    "labels": [
+      "Paid",
+      "Pending",
+      "Rejected"
+    ],
+    "classification_report": {
+      "Paid": {
+        "precision": 0.6189502385821404,
+        "recall": 0.300463269358041,
+        "f1-score": 0.4045444419692582,
+        "support": 3022.0
+      },
+      "Pending": {
+        "precision": 0.24135021097046414,
+        "recall": 0.23195458231954583,
+        "f1-score": 0.23655913978494625,
+        "support": 1233.0
+      },
+      "Rejected": {
+        "precision": 0.14863713798977854,
+        "recall": 0.4684563758389262,
+        "f1-score": 0.22567086970578726,
+        "support": 745.0
+      },
+      "accuracy": 0.3086,
+      "macro avg": {
+        "precision": 0.3363125291807944,
+        "recall": 0.33362474250550433,
+        "f1-score": 0.28892481715333057,
+        "support": 5000.0
+      },
+      "weighted avg": {
+        "precision": 0.45575741978483914,
+        "recall": 0.3086,
+        "f1-score": 0.3364671041833497,
+        "support": 5000.0
+      }
+    }
+  },
+  "claim_random_forest": {
+    "accuracy": 0.4486,
+    "balanced_accuracy": 0.40727546500812345,
+    "macro_f1": 0.36018997728675145,
+    "confusion_matrix": [
+      [
+        1690,
+        342,
+        990
+      ],
+      [
+        621,
+        150,
+        462
+      ],
+      [
+        247,
+        95,
+        403
+      ]
+    ],
+    "labels": [
+      "Paid",
+      "Pending",
+      "Rejected"
+    ],
+    "classification_report": {
+      "Paid": {
+        "precision": 0.6606724003127443,
+        "recall": 0.5592322964923891,
+        "f1-score": 0.6057347670250897,
+        "support": 3022.0
+      },
+      "Pending": {
+        "precision": 0.2555366269165247,
+        "recall": 0.12165450121654502,
+        "f1-score": 0.16483516483516483,
+        "support": 1233.0
+      },
+      "Rejected": {
+        "precision": 0.21725067385444743,
+        "recall": 0.5409395973154363,
+        "f1-score": 0.31,
+        "support": 745.0
+      },
+      "accuracy": 0.4486,
+      "macro avg": {
+        "precision": 0.3778199003612388,
+        "recall": 0.40727546500812345,
+        "f1-score": 0.36018997728675145,
+        "support": 5000.0
+      },
+      "weighted avg": {
+        "precision": 0.49469608135095033,
+        "recall": 0.4486,
+        "f1-score": 0.45294444483831586,
+        "support": 5000.0
+      }
+    }
+  }
+}

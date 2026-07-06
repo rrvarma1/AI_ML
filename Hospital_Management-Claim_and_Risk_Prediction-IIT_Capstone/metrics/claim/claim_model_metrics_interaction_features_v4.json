@@ -1,0 +1,112 @@
+{
+  "v1_random_forest": {
+    "model": "V1 Random Forest",
+    "accuracy": 0.4486,
+    "macro_f1": 0.36018997728675145,
+    "rejected_recall": 0.5409395973154363
+  },
+  "v2_xgboost": {
+    "model": "V2 XGBoost",
+    "accuracy": 0.4272,
+    "macro_f1": 0.3698800553326597,
+    "rejected_recall": 0.521505376344086
+  },
+  "v3_hypertuned_random_forest": {
+    "model": "V3 Hypertuned Random Forest",
+    "accuracy": 0.4296,
+    "macro_f1": 0.3670269303342777,
+    "rejected_recall": 0.610738255033557
+  },
+  "v4_interaction_features_random_forest": {
+    "accuracy": 0.4248,
+    "balanced_accuracy": 0.4109442371813002,
+    "macro_f1": 0.3568770859409969,
+    "rejected_recall": 0.5906040268456376,
+    "confusion_matrix": [
+      [
+        1507,
+        448,
+        1067
+      ],
+      [
+        560,
+        177,
+        496
+      ],
+      [
+        188,
+        117,
+        440
+      ]
+    ],
+    "labels": [
+      "Paid",
+      "Pending",
+      "Rejected"
+    ],
+    "classification_report": {
+      "Paid": {
+        "precision": 0.6682926829268293,
+        "recall": 0.4986763732627399,
+        "f1-score": 0.5711578548417662,
+        "support": 3022.0
+      },
+      "Pending": {
+        "precision": 0.238544474393531,
+        "recall": 0.1435523114355231,
+        "f1-score": 0.17924050632911392,
+        "support": 1233.0
+      },
+      "Rejected": {
+        "precision": 0.21967049425861207,
+        "recall": 0.5906040268456376,
+        "f1-score": 0.32023289665211063,
+        "support": 745.0
+      },
+      "accuracy": 0.4248,
+      "macro avg": {
+        "precision": 0.3755025505263241,
+        "recall": 0.4109442371813002,
+        "f1-score": 0.3568770859409969,
+        "support": 5000.0
+      },
+      "weighted avg": {
+        "precision": 0.4954720685909536,
+        "recall": 0.4248,
+        "f1-score": 0.43712321792828746,
+        "support": 5000.0
+      }
+    }
+  },
+  "interaction_features": [
+    "department_avg_billed_amount",
+    "bill_vs_department_avg",
+    "bill_to_department_avg_ratio",
+    "provider_avg_billed_amount",
+    "bill_vs_provider_avg",
+    "bill_to_provider_avg_ratio",
+    "department_avg_length_of_stay",
+    "los_to_department_avg_ratio",
+    "billed_amount_per_stay_hour",
+    "department_avg_billing_lag",
+    "billing_lag_vs_department_avg",
+    "billing_lag_to_department_avg_ratio",
+    "provider_avg_billing_lag",
+    "billing_lag_vs_provider_avg",
+    "billing_lag_to_provider_avg_ratio",
+    "age_chronic_interaction",
+    "los_chronic_interaction",
+    "billed_amount_chronic_interaction"
+  ],
+  "leakage_control": "Aggregate mappings fitted only on training rows inside ClaimInteractionFeatureTransformer.",
+  "parameters_inherited_from_v3": {
+    "n_estimators": 450,
+    "min_samples_split": 12,
+    "min_samples_leaf": 2,
+    "max_features": 0.75,
+    "max_depth": 10,
+    "class_weight": "balanced",
+    "bootstrap": true,
+    "random_state": 42
+  }
+}
