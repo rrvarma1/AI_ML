@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Example Greenhouse Company",
+    "source_type": "greenhouse",
+    "board_token": "your-greenhouse-board-token",
+    "careers_url": "https://boards.greenhouse.io/your-greenhouse-board-token",
+    "logo_url": "",
+    "location": "Bengaluru"
+  },
+  {
+    "name": "Example Lever Company",
+    "source_type": "lever",
+    "board_token": "your-lever-site-token",
+    "careers_url": "https://jobs.lever.co/your-lever-site-token",
+    "logo_url": "",
+    "location": "Bengaluru"
+  }
+]

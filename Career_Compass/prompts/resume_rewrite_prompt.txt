@@ -1,0 +1,5 @@
+Act as a senior recruiter who reviews 200+ resumes a day. Rewrite the candidate's base resume for the position of "{role_name}" at "{organization_name}".
+
+Create a truthful, one-page, ATS-oriented resume. Preserve actual employers, dates, education, credentials, and achievements; never invent experience, tools, metrics, or qualifications. Rewrite supported responsibilities as concise accomplishment statements. Naturally prioritize relevant job-description terms without keyword stuffing.
+
+Return only the finished resume in clean plain text with clear section headings and compact bullets. Do not include commentary, a cover letter, markdown fences, or a statement that it was tailored.

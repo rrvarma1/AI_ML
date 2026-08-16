@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Career Compass</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<aside>
+  <div class="brand"><span class="brand-mark">✦</span><span>Career<br>Compass</span></div>
+  <nav>
+    <button class="nav active" data-v="dashboard"><span>⌂</span>Dashboard</button>
+    <button class="nav" data-v="settings"><span>▣</span>Job Preferences</button>
+    <button class="nav" data-v="history"><span>☆</span>Submitted Roles</button>
+  </nav>
+  <small>Your private local job workspace</small>
+</aside>
+<main>
+  <header>
+    <div class="page-heading">
+      <p id="eyebrow">WELCOME BACK</p>
+      <h1 id="title">Your opportunities</h1>
+      <p id="today-date" class="today"></p>
+    </div>
+    <div class="refresh-wrap">
+      <button class="primary" id="refresh">↻ Refresh jobs</button>
+      <div id="refresh-progress" class="refresh-progress" aria-live="polite" aria-hidden="false">
+        <div class="refresh-progress-head"><span id="refresh-stage">Ready to refresh</span><strong id="refresh-percent">0%</strong></div>
+        <div class="refresh-track"><span id="refresh-fill"></span><i id="refresh-glow"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <div id="notice"></div>
+
+  <section id="dashboard" class="view active">
+    <div class="bar dashboard-bar">
+      <div><b id="count">0 openings</b> <span>posted in the last 7 days</span></div>
+      <div class="actions">
+        <button class="dark" id="submit">Submit selected <i id="selected">0</i></button>
+        <button class="primary" id="tailor">Tailor selected resumes</button>
+      </div>
+    </div>
+    <div id="jobs" class="grid"></div>
+    <div class="empty" id="no-jobs">Add organizations, locations, and target roles in Job Preferences, then refresh to find matching new jobs.</div>
+  </section>
+
+  <section id="history" class="view">
+    <div class="section-intro"><h2>Submitted roles</h2><p class="muted">A clear record of opportunities you chose to pursue.</p></div>
+    <div id="history-list" class="history-list"></div>
+    <div class="empty" id="no-history">Nothing submitted yet.</div>
+  </section>
+
+  <section id="settings" class="view settings-view">
+    <div class="settings-head">
+      <div><h2>Job Preferences</h2><p class="muted">Manage organizations, target roles and your base resume for tailored job matching.</p></div>
+      <button class="primary" id="save-settings">Save preferences</button>
+    </div>
+
+    <div class="settings-grid">
+      <article class="pref-card organizations-panel">
+        <div class="card-head">
+          <div><h3>Organizations <span id="org-total" class="count-pill">0</span></h3><p class="muted">Career sites and preferred cities.</p></div>
+          <button id="add" class="soft-btn">＋ Add Organization</button>
+        </div>
+        <div class="org-table-wrap">
+          <div class="org-table-head">
+            <span>#</span><span>Organization</span><span>Careers URL</span><span>Source</span><span>Token</span><span>Location</span><span></span>
+          </div>
+          <div id="orgs"></div>
+        </div>
+        <div class="org-pagination">
+          <div class="pager-buttons">
+            <button id="org-prev" class="pager" aria-label="Previous organizations">‹</button>
+            <div id="org-pages" class="page-numbers"></div>
+            <button id="org-next" class="pager" aria-label="Next organizations">›</button>
+          </div>
+          <span id="org-range" class="pager-range">Showing 0–0 of 0</span>
+        </div>
+      </article>
+
+      <article class="pref-card roles-panel">
+        <div class="card-head compact"><div><h3>Target Job Titles</h3><p class="muted">One role per line.</p></div></div>
+        <textarea id="roles" rows="10" placeholder="Technical Program Manager\nDirector of Engineering\nAI Program Manager"></textarea>
+        <p class="card-footnote">Matching includes related keyword families.</p>
+      </article>
+
+      <article class="pref-card resume-panel">
+        <div class="card-head compact"><div><h3>Create Tailored Resume</h3><p class="muted">Upload your current resume.</p></div></div>
+        <label class="upload">
+          <input id="file" type="file" accept=".txt,.pdf,.docx">
+          <span class="upload-icon">⇧</span>
+          <strong>Choose a resume</strong>
+          <small>TXT, PDF or DOCX</small>
+        </label>
+        <div id="resume-uploaded-indicator" class="resume-uploaded-indicator" hidden>
+          <span class="resume-uploaded-icon" aria-hidden="true">✓</span>
+          <span class="resume-uploaded-text"><strong>Resume uploaded</strong><small id="resume-uploaded-name"></small></span>
+        </div>
+        <p class="muted resume-status" id="resume-status"></p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<template id="card">
+  <article class="card">
+    <div class="top"><div class="logo"></div><label><input type="checkbox"><em></em></label></div>
+    <p class="org"></p><h3></h3><p class="meta"></p><p class="location"></p><p class="summary"></p>
+    <div class="bottom"><a target="_blank">View posting ↗</a><time></time></div>
+  </article>
+</template>
+<script src="/app.js"></script>
+</body>
+</html>
