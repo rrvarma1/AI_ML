@@ -1,0 +1,11 @@
+PyMuPDF>=1.26,<2
+openpyxl>=3.1,<4
+docling>=2,<3
+llama-index-core>=0.12,<1
+langchain-core>=0.3,<2
+langchain-pinecone>=0.2.12,<2
+pinecone>=5,<9
+python-dotenv>=1,<2
+rank-bm25>=0.2.2,<1
+ollama>=0.5,<1
+streamlit>=1.40,<2

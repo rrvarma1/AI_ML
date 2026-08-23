@@ -1,0 +1,2 @@
+[console_scripts]
+rbi-preprocess = rbi_rag_preprocessing.cli:main
