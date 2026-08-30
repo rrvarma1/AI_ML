@@ -1,0 +1,40 @@
+{
+  "case_id": "PV-20260830-D7E37D",
+  "created_at": "2026-08-30T14:19:23.715062+00:00",
+  "extraction_method": "llm_structured_output",
+  "model_name": "ollama:gemma3:4b",
+  "warnings": [
+    "Ollama extraction required one targeted retry.",
+    "Explicit labelled values recovered for: borrower_name, deal_type, currency, purpose, industry, collateral_type, loan_amount, term_years, term_months, interest_rate_pct, estimated_dscr, debt_to_equity, current_ratio, revenue_growth_pct, collateral_market_value, collateral_realisable_value, stated_collateral_coverage, total_facility_amount."
+  ],
+  "extracted_terms": {
+    "borrower_name": "GreenLeaf Packaging Private Limited",
+    "deal_type": "New secured term loan",
+    "currency": "INR",
+    "purpose": "Purchase and installation of a biodegradable",
+    "jurisdiction": null,
+    "industry": "Sustainable packaging manufacturing",
+    "collateral_type": "First charge over manufacturing plant and machinery",
+    "existing_covenants": null,
+    "loan_amount": 50000000.0,
+    "term_years": 5.0,
+    "term_months": 60,
+    "interest_rate_pct": 10.25,
+    "interest_amount": null,
+    "estimated_dscr": 1.42,
+    "debt_to_equity": 2.8,
+    "total_debt": null,
+    "tangible_net_worth": null,
+    "current_ratio": 1.05,
+    "current_assets": null,
+    "current_liabilities": null,
+    "revenue_growth_pct": 12.5,
+    "collateral_market_value": 72000000.0,
+    "collateral_realisable_value": 57500000.0,
+    "stated_ltv": null,
+    "stated_collateral_coverage": 1.15,
+    "total_facility_amount": 50000000.0,
+    "monthly_principal_instalment": null,
+    "number_of_instalments": null
+  }
+}

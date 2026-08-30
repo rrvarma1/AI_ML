@@ -1,0 +1,23 @@
+Borrower Name: GreenLeaf Packaging Private Limited
+Deal Type: Secured term loan
+Loan Amount: INR 50,000,000
+Interest Rate: 10.25%
+Loan Term: 5 years
+Collateral Value: INR 70,000,000
+Collateral Type: First charge over manufacturing plant and machinery
+Debt-Service Coverage Ratio: 1.42x
+Estimated Market Value: INR 72,000,000
+Estimated Realisable Value: INR 57,500,000
+Indicative Coverage: 1.15x
+Total Debt: INR 63,000,000
+Tangible Net Worth: INR 35,000,000
+Monthly Principal Instalment: INR 925,926
+Number of Instalments: 54
+Purpose: Purchase and installation of a biodegradable packaging production line
+Jurisdiction: India
+Industry: Sustainable packaging manufacturing
+Debt-to-Equity: 1.35x
+Current Ratio: 1.35x
+Revenue Growth: 12.5%
+Existing Covenants: Maintain DSCR of at least 1.25x and current ratio of at least 1.20x
+Total Facility Amount: INR 50,000,000

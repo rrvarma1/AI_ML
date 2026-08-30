@@ -1,0 +1,30 @@
+{
+  "agent_name": "agent_2_risk_and_summary",
+  "risk_rule_catalog_version": "greenleaf-risk-demo-1.1",
+  "summary_model": "gemma3:4b",
+  "overall_risk": "UNABLE_TO_ASSESS",
+  "recommendation": "INSUFFICIENT_INFORMATION",
+  "risk_flags": [],
+  "positive_factors": [
+    "Estimated DSCR is at or above the configured 1.25x minimum. Observed value: 1.42.",
+    "Current ratio is at or above the configured 1.25x minimum. Observed value: 1.35.",
+    "Revenue growth meets or exceeds the configured 10% benchmark. Observed value: 12.5.",
+    "Calculated LTV is within the configured 75% ceiling. Observed value: 69.44.",
+    "Realisable collateral coverage meets the configured 1.10x buffer. Observed value: 1.15.",
+    "The collateral valuation haircut is within the configured 25% tolerance. Observed value: 20.14."
+  ],
+  "missing_information": [
+    "debt_to_equity"
+  ],
+  "calculated_metrics": {
+    "estimated_dscr": 1.42,
+    "debt_to_equity": null,
+    "current_ratio": 1.35,
+    "revenue_growth_pct": 12.5,
+    "calculated_ltv_pct": 69.44,
+    "realisable_collateral_coverage": 1.15,
+    "collateral_valuation_haircut_pct": 20.14
+  },
+  "summary": "The assessment is unable to be completed due to insufficient information regarding debt-to-equity ratios. Despite favorable metrics such as revenue growth and collateral coverage, the lack of this key data prevents a conclusive determination. This recommendation is not a lending decision, and further investigation is required to obtain the missing information.",
+  "confidence": 0.86
+}

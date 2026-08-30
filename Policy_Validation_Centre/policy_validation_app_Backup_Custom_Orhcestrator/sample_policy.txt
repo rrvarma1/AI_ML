@@ -1,0 +1,10 @@
+COMMERCIAL CREDIT POLICY
+Purpose: Define credit standards for business term loans.
+Scope: Applies to commercial borrowers in India.
+Maximum LTV: 75%
+Minimum DSCR: 1.25x
+Maximum Debt-to-Equity: 2.00x
+Minimum Current Ratio: 1.20x
+Approval Authority: Credit Committee
+Exceptions: Any deviation requires documented Credit Committee approval.
+
