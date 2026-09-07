@@ -1,0 +1,97 @@
+{
+  "version": "greenleaf-risk-demo-1.1",
+  "rules": [
+    {
+      "risk_id": "RSK-001",
+      "category": "DEBT_SERVICE",
+      "title": "Weak debt-service capacity",
+      "metric": "estimated_dscr",
+      "operator": "lt",
+      "threshold": 1.25,
+      "severity": "HIGH",
+      "required": true,
+      "message": "Estimated DSCR is below the configured 1.25x minimum.",
+      "clear_message": "Estimated DSCR is at or above the configured 1.25x minimum.",
+      "recommended_action": "Review repayment capacity and projected cash flows."
+    },
+    {
+      "risk_id": "RSK-002",
+      "category": "LEVERAGE",
+      "title": "High financial leverage",
+      "metric": "debt_to_equity",
+      "operator": "gt",
+      "threshold": 2.0,
+      "severity": "HIGH",
+      "required": true,
+      "message": "Debt-to-equity exceeds the configured 2.00x ceiling.",
+      "clear_message": "Debt-to-equity is within the configured 2.00x ceiling.",
+      "recommended_action": "Review the capital structure and consider additional equity support."
+    },
+    {
+      "risk_id": "RSK-003",
+      "category": "LIQUIDITY",
+      "title": "Weak short-term liquidity",
+      "metric": "current_ratio",
+      "operator": "lt",
+      "threshold": 1.25,
+      "severity": "HIGH",
+      "required": true,
+      "message": "Current ratio is below the configured 1.25x minimum.",
+      "clear_message": "Current ratio is at or above the configured 1.25x minimum.",
+      "recommended_action": "Review working-capital forecasts and liquidity support."
+    },
+    {
+      "risk_id": "RSK-004",
+      "category": "GROWTH",
+      "title": "Weak revenue growth",
+      "metric": "revenue_growth_pct",
+      "operator": "lt",
+      "threshold": 10.0,
+      "severity": "MEDIUM",
+      "required": false,
+      "message": "Revenue growth is below the configured 10% benchmark.",
+      "clear_message": "Revenue growth meets or exceeds the configured 10% benchmark.",
+      "recommended_action": "Review revenue assumptions and downside scenarios."
+    },
+    {
+      "risk_id": "RSK-005",
+      "category": "LTV",
+      "title": "High loan-to-value ratio",
+      "metric": "calculated_ltv_pct",
+      "operator": "gt",
+      "threshold": 75.0,
+      "severity": "HIGH",
+      "required": true,
+      "message": "Calculated LTV exceeds the configured 75% ceiling.",
+      "clear_message": "Calculated LTV is within the configured 75% ceiling.",
+      "recommended_action": "Consider additional collateral or a lower facility amount."
+    },
+    {
+      "risk_id": "RSK-006",
+      "category": "COLLATERAL_COVERAGE",
+      "title": "Limited realisable collateral coverage",
+      "metric": "realisable_collateral_coverage",
+      "operator": "lt",
+      "threshold": 1.10,
+      "severity": "MEDIUM",
+      "critical_threshold": 1.0,
+      "required": true,
+      "message": "Realisable collateral coverage is below the configured 1.10x buffer.",
+      "clear_message": "Realisable collateral coverage meets the configured 1.10x buffer.",
+      "recommended_action": "Review recovery assumptions and consider additional security."
+    },
+    {
+      "risk_id": "RSK-007",
+      "category": "COLLATERAL_HAIRCUT",
+      "title": "Material collateral valuation haircut",
+      "metric": "collateral_valuation_haircut_pct",
+      "operator": "gt",
+      "threshold": 25.0,
+      "severity": "MEDIUM",
+      "required": true,
+      "message": "The difference between market and realisable collateral values exceeds 25%.",
+      "clear_message": "The collateral valuation haircut is within the configured 25% tolerance.",
+      "recommended_action": "Confirm valuation assumptions and collateral saleability."
+    }
+  ]
+}
